@@ -16,9 +16,9 @@ gcloud pubsub topics create cron-topic
 gcloud scheduler jobs create pubsub cloudflare-update --schedule "0 0 * * *" --topic cron-topic
 
 # Then deploy
-make deploy topic=cron-topic firewall=FIREWALL_ID  
+make deploy topic=cron-topic firewall=FIREWALL_ID project=GCP_PROJECT_ID
 ```
 
 ## License
 
-Copyright (c) 2020 Richard Lee. See LICENSE for details.
+Copyright (c) 2020-2024 Richard Lee. See LICENSE for details.
